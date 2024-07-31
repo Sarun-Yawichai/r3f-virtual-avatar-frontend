@@ -5,6 +5,10 @@
 
 :root {
   --leva-sizes-rootWidth: 340px;
+  --pink: #faaca8;
+  --purple: #6A1992;
+  --gray: #F7F7FB;
+  --main-color: var(--gray);
 }
 
 #root {
@@ -14,11 +18,29 @@
 
 body {
   margin: 0;
-  background-color: #faaca8;
-  background-image: linear-gradient(19deg, #faaca8 0%, #ddd6f3 100%);
+  background-color: var(--main-color);
+  background-image: linear-gradient(19deg, var(--main-color) 0%, #ddd6f3 100%);
 }
 
 body.greenScreen {
   background-color: #00ff00;
   background-image: none;
+}
+
+.chat-form input:focus-visible {
+  outline: none;
+}
+
+.chat-message.user {
+  @apply items-end;
+}
+.chat-message.bot {
+  @apply items-start;
+}
+
+.chat-message.user .chat-bubble{
+  @apply bg-purple-900 text-white p-4 rounded-3xl rounded-br-none w-fit;
+}
+.chat-message.bot .chat-bubble{
+  @apply bg-white p-4 rounded-3xl rounded-bl-none w-fit;
 }
