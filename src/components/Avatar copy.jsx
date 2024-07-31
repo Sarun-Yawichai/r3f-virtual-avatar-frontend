@@ -308,12 +308,6 @@ export function Avatar(props) {
     return () => clearTimeout(blinkTimeout);
   }, []);
 
-  useFrame((state) => {
-    if (true) {
-      group.current.getObjectByName("Head").lookAt(state.camera.position);
-    }
-  });
-
   return (
     <group {...props} dispose={null} ref={group}>
       <primitive object={nodes.Hips} />
