@@ -8,7 +8,7 @@ import { useChat } from "./hooks/useChat";
 import { ChatHistory } from "./components/ChatHistory";
 import { Link } from "react-router-dom";
 
-let hello = false;
+let hello = true;
 
 function App() {
   const input = useRef();
