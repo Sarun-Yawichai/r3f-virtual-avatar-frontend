@@ -11,7 +11,7 @@ export function ChatHistory({ history }) {
   }
 
   function textToHtml(text) {
-    let text_replace = text.replace(/(?:\r\n|\r|\n)/g, "<br />");
+    let text_replace = text?.replace(/(?:\r\n|\r|\n)/g, "<br />");
     return text_replace;
   }
 
